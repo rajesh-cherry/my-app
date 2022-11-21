@@ -1,0 +1,15 @@
+<p>rating works!</p>
+<h1> Rating </h1>
+<select [(ngModel)]="rating">
+    <option>5</option>
+    <option>4</option>
+    <option>3</option>
+    <option>2</option>
+    <option>1</option>
+</select>  <br>
+
+<img src="/assets/1star.jpg" *ngIf="rating==1"> <br> <br>
+<img src="/assets/2star.jpg" *ngIf="rating==2"> <br> <br>
+<img src="/assets/3star.jpg" *ngIf="rating==3"> <br> <br>
+<img src="/assets/4star.jpg" *ngIf="rating==4"> <br> <br>
+<img src="/assets/5star.jpg" *ngIf="rating==5"> 

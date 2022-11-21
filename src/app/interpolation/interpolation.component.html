@@ -1,0 +1,83 @@
+<h1> Age is {{age}}</h1>
+<h2> Name is {{name}} </h2>
+<h2> IS Indian {{isindian}}</h2>
+<h2 *ngFor="let age of ages"> {{age}}</h2>
+
+<ol>
+    <li *ngFor="let name of names">{{name}}</li>
+</ol>
+
+
+<h2 *ngFor="let product of products">{{product.name}} {{product.price}}</h2>
+<ol>
+    <li *ngFor="let product of products">{{product.name}} {{product.price}}</li>
+</ol>
+
+<table border="1">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Price</th>
+        </tr>
+
+    </thead>
+    <tbody>
+        <tr *ngFor="let product of products">
+            <td>{{product.name}}  </td>
+            <td>{{product.price}}</td>
+
+        </tr>
+
+    </tbody>
+</table>
+
+<table border="1">
+    <thead>
+        <tr>
+            <th>Qualification</th>
+            <th>School</th>
+            <th>year</th>
+        </tr>
+
+    </thead>
+    <tbody>
+        <tr *ngFor="let rajesh of academics">
+            <td>{{rajesh.qualification}}</td>
+            <td>{{rajesh.school}}</td>
+            <td>{{rajesh.year}}</td>
+        </tr>
+
+    </tbody>
+</table>
+
+<table border="1">
+    <thead>
+
+        <tr>
+        <th> Vehicle</th>
+        <th> manufacturer</th>
+        <th> model </th>
+        <th> type</th>
+        <th> fuel</th>
+        <th> color</th>
+        <th> image</th>
+        <th> id</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let vehicle of vehicles">
+            <td>{{vehicle.vehicle}}</td>
+            <td>{{vehicle.manufacturer}}</td>
+            <td>{{vehicle.model}}</td>
+            <td>{{vehicle.type}}</td>
+            <td>{{vehicle.fuel}}</td>
+            <td>{{vehicle.color}}</td>
+            <td><img src="{{vehicle.image}}" height="30px" width="30px"> </td>
+            <td>{{vehicle.id}}</td>
+            
+            
+        </tr>
+
+
+    </tbody>
+</table>

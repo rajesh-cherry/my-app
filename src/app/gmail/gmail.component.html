@@ -1,0 +1,19 @@
+<table class="table table-dark">
+    <thead>
+
+    </thead>
+    <tbody>
+        <tr>
+            <!-- <th>userId</th> -->
+            <th>Id</th>
+            <th>title</th>
+            <th>completed</th>
+        </tr>
+        <tr *ngFor="let product of mails">
+            <!-- <td> {{product.userId}} </td> -->
+            <td> {{product.id}} </td>
+            <td> {{product.title}} </td>
+            <td> {{product.completed}} </td>
+        </tr>
+    </tbody>
+</table>

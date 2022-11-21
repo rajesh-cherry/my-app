@@ -1,0 +1,34 @@
+<h1> Cart </h1>
+<label> name:</label>
+<input type="text" [(ngModel)]="name"> <br>
+
+<label> price: </label>
+<input type="number" [(ngModel)]="price"> <br>
+
+<label> quantity: </label>
+<input type="number" [(ngModel)]="quantity"> <br>
+
+<button (click)="addtocart()"> add to cart </button>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th> S.no </th>
+            <th> name </th>
+            <th> price </th>
+            <th> quantity </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let cart of carts; let i=index">
+            <td>{{i}}</td>
+            <td>{{cart.name}}</td>
+            <td>{{cart.price | price }}</td>
+            <!-- attribute directives -->
+            <td [ngStyle]="{'color': cart.quantity>=10 ? 'yellow' : 'red'}">{{cart.quantity}}</td>
+            <td><button (click)="delete(i)">delete</button></td>
+        </tr>
+    </tbody>
+</table>
+
+
